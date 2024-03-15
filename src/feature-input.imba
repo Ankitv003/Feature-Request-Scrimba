@@ -43,7 +43,7 @@ tag feature-input
 		done= !done
 		if currentMonth != new Date().getMonth()
 			resetFeatures()
-		if currentMonthFeaturesCount < 1
+		if currentMonthFeaturesCount < 5
 			features.push({inputValue, areaValue, countLike: 0, countDislike: 0})
 			inputValue=''
 			areaValue=''
