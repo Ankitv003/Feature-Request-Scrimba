@@ -48,8 +48,7 @@ global css
 		$tiger5: hsla(34, 95.75%, 68.5%, 1);
 		$tiger6: hsla(34, 96%, 63%, 100%);
 	body c:$tok-number bg:warm ff:Arial 
-	# d:flex
-
+	
 tag app
 	prop features=[]
 	css .container bgc:$tiger2 p:20px 30px m:10px rd:15px lh:1.6 ta:center fs:1.2rem
