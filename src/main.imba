@@ -47,7 +47,9 @@ global css
 		$tiger4: hsla(34, 95.5%, 74%, 1);
 		$tiger5: hsla(34, 95.75%, 68.5%, 1);
 		$tiger6: hsla(34, 96%, 63%, 100%);
+		$indigo-color: #4B0082 
 	body c:$tok-number bg:warm ff:Arial 
+	.container d:flex jac:center ai:center
 	
 tag app
 	prop features=[]
