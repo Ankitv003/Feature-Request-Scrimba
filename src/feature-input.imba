@@ -99,8 +99,8 @@ tag feature-input
 			<button.feature-request-button @click=handleClick> done ? "Close❌" : "Request a Feature"
 		if done
 				<form.container-input @submit.prevent=handleSubmit>
-					<input.input-change type="text" required maxLength="50" @change=handleTextChange value=inputValue  placeholder="Enter the feature in 50 characters..">
-					<textarea.input-change-area required maxLength="150" @change=handleAreaTextChange value=areaValue placeholder="Enter the details in 150 characters..">
+					<input.input-change type="text" required maxLength="50" @change=handleTextChange bind=inputValue value=inputValue  placeholder="Enter the feature in 50 characters..">
+					<textarea.input-change-area required maxLength="150" @change=handleAreaTextChange bind=areaValue value=areaValue placeholder="Enter the details in 150 characters..">
 					<div.submit-btn-div>
 						<button.button-input> "Submit"
 					<div.max-features-reached> maxFeaturesReachedMessage
