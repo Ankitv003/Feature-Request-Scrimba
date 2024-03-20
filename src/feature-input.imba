@@ -75,13 +75,14 @@ tag feature-input
 		areaValue = e.target.value
 		
 	def handleClearData
-		if window.confirm("Are you sure you want to clear local storage data? This action cannot be undone.")
-			clearData()
-			features=[]
-			persist()
-		else
-			return
-
+		if features.length>0
+			if window.confirm("Are you sure you want to delete all features? This action cannot be undone.")
+				clearData()
+				features=[]
+				persist()
+			else
+				return
+		persist()
 
 	
 	def sortByCountLike
@@ -120,4 +121,4 @@ tag feature-input
 						<button.vote-btn-like  @click=countDislikeIncrease(feature)> "{feature.countDislike} ⛔"
 						<button.vote-btn-dislike  @click=countLikeIncrease(feature)> "{feature.countLike} 👍"
 		<div.clear-btn-div>
-			<button.clear-btn @click=handleClearData> "Clear Local Storage Data"
+			<button.clear-btn @click=handleClearData> "Delete Features"
