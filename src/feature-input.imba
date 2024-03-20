@@ -27,6 +27,7 @@ tag feature-input
 		shadow:0 5px 15px black/50 scale@hover:105% transition:transform 0.25s ease-in-out
 		button float:right  m:12px mx:8px w:5em h:2em fs:1em d:flex jac:center pt:0.17em rd:1em bgc:warm3 bgc@hover:cool5 c@hover:white bd:none
 		.vote-buttons pb:1em 
+		.vote-btn-like, .vote-btn-dislike pt:5px
 		.feature-input-value fs:1.25em
 		.feature-area-value c: $indigo-color
 
@@ -34,8 +35,9 @@ tag feature-input
 	css 
 		body@!500 of:scroll
 		.input-change@!500 p:5px fs:0.9em
+		.input-change-area@!500 pb:1em fs:1.2em
 		.feature-request-button@!500 ml:3em fs:0.9em
-		.container-feature@!500 w:65% lh:1.6
+		.container-feature@!500 w:65% lh:1.6 ml:1.1em
 
 	def persist
 		persistData(features)
@@ -97,7 +99,7 @@ tag feature-input
 			<button.feature-request-button @click=handleClick> done ? "Close❌" : "Request a Feature"
 		if done
 				<form.container-input @submit.prevent=handleSubmit>
-					<input.input-change type="text" maxLength="50" @change=handleTextChange value=inputValue required placeholder="Enter the feature in 50 characters..">
+					<input.input-change type="text" required maxLength="50" @change=handleTextChange value=inputValue  placeholder="Enter the feature in 50 characters..">
 					<textarea.input-change-area required maxLength="150" @change=handleAreaTextChange value=areaValue placeholder="Enter the details in 150 characters..">
 					<div.submit-btn-div>
 						<button.button-input> "Submit"
@@ -111,7 +113,7 @@ tag feature-input
 					<summary.feature-input-value> feature.inputValue
 					<p.feature-area-value> feature.areaValue
 				<div.vote-buttons>
-						<button  @click=countDislikeIncrease(feature)> "{feature.countDislike} ⛔"
-						<button  @click=countLikeIncrease(feature)> "{feature.countLike} 👍"
+						<button.vote-btn-like  @click=countDislikeIncrease(feature)> "{feature.countDislike} ⛔"
+						<button.vote-btn-dislike  @click=countLikeIncrease(feature)> "{feature.countLike} 👍"
 		<div.clear-btn-div>
 			<button.clear-btn @click=clearData> "Clear Local Storage Data"
