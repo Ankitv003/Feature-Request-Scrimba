@@ -2,6 +2,13 @@
 
 This feature request app is specifically designed for Scrimba, allowing every user on the website to request particular features. The top feature with the most likes will be implemented by the developer on a monthly or quarterly basis. Each month, the features are refreshed, and new features can be requested. To ensure fair participation, the number of feature requests is limited to 5 per month.
 
+## Screenshots
+![main page](<./screenshots/image1.png>)
+![input request](<./screenshots/image2.png>)
+![features name listed](<./screenshots/image3.png>)
+![features name with descriptiom](<./screenshots/image4.png>)
+![mobile main page](<./screenshots/mobile-image1.png>)
+![mobile main page with description](<./screenshots/mobile-image2.png>)
 ## Usage
 
 ### Requesting Features
