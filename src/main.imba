@@ -1,4 +1,5 @@
 import "./feature-input.imba"
+import videobg from "../video-bg/bg-video(fast).mp4"
 
 global css 
 	@root
@@ -49,21 +50,25 @@ global css
 		$tiger6: hsla(34, 96%, 63%, 100%);
 		$indigo-color: #4B0082 
 	body c:$tok-number bg:warm ff:Arial 
-	.container d:flex jac:center ai:center
-	
+	# bgi:url("../images/img2.jpg") background-position:center
 tag app
 	prop features=[]
 	css .container bgc:$tiger2 p:20px 30px m:10px rd:15px lh:1.6 ta:center fs:1.2rem
+		.main w:100% h:auto d:flex jac:center
+		.video-background
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			overflow: hidden
+			z-index: -1
+		video w:100% h:100% object-fit:cover bgc:rgba(0, 0, 0, 0.5);
 	<self>
 		<div.container>
+			<div.main>
+				<video.video-background src=videobg autoplay loop muted>
 			<h1> "Feature Request"
 		<feature-input>
-
-
-
-
-
-
-
 
 imba.mount <app>
