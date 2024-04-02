@@ -1,5 +1,5 @@
 import "./feature-input.imba"
-import videobg from "../video-bg/bg-video(fast).mp4"
+import videobg from "../video-bg/bg-video.mp4"
 
 global css 
 	@root
