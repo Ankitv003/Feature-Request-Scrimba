@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "imba": "^2.0.0-alpha.234",
-    "vite": "^5.1.4",
+    "vite": "^5.1.7",
     "vite-plugin-imba": "^0.10.3"
   }
 }
